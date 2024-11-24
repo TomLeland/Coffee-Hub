@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 350 58% 35%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 353 77% 65%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 350 58% 35%;
+
+    --radius: 0.75rem;
+  }
+}
+
+/* Base styles */
+body {
+  @apply bg-surface-secondary text-text-primary;
+}
+
+/* Sidebar styles */
+.sidebar {
+  @apply bg-primary text-white;
+}
+
+/* Card styles */
+.card {
+  @apply bg-surface rounded-xl shadow-sm border border-border transition-all duration-300 hover:shadow-lg;
+}
+
+/* Stats card styles */
+.stats-card {
+  @apply rounded-xl p-6;
+}
+
+.stats-card.primary {
+  @apply bg-primary text-white;
+}
+
+.stats-card.accent-pink {
+  @apply bg-accent-pink text-white;
+}
+
+.stats-card.accent-blue {
+  @apply bg-accent-blue text-white;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply bg-primary text-white hover:bg-primary-dark transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-accent-pink text-white hover:bg-accent-red transition-colors;
+}
+
+/* Chart styles */
+.chart-primary {
+  @apply text-chart-primary;
+}
+
+.chart-secondary {
+  @apply text-chart-secondary;
+}
+
+.chart-accent {
+  @apply text-chart-accent;
+}
+
+/* Badge styles */
+.badge {
+  @apply px-2 py-0.5 rounded-full text-sm font-medium;
+}
+
+.badge-primary {
+  @apply bg-primary/10 text-primary;
+}
+
+.badge-accent {
+  @apply bg-accent-pink/10 text-accent-red;
+}
+
+/* Progress bar styles */
+.progress-bar {
+  @apply h-2 rounded-full overflow-hidden bg-surface-muted;
+}
+
+.progress-bar-fill {
+  @apply h-full bg-primary transition-all duration-300;
+}
+
+/* Mapbox custom styles */
+.mapboxgl-marker {
+  cursor: pointer;
+}
+
+.mapboxgl-popup-content {
+  padding: 0 !important;
+  border-radius: 0.75rem !important;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+}
